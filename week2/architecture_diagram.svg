@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Arial, Helvetica, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#404040"/>
+    </marker>
+    <marker id="arrowDash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#808080"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F1F1F">Data Flow Architecture: Web App to Analytics Dashboard</text>
+  <text x="600" y="60" text-anchor="middle" font-size="13" fill="#595959">Client side (green), server side (blue), analytics side (yellow)</text>
+
+  <!-- Main flow boxes: x = 30, 225, 420, 615, 810, 1005; y = 130; w = 165; h = 120 -->
+
+  <!-- 1. User action -->
+  <rect x="30" y="130" width="165" height="120" rx="8" fill="#E2F0D9" stroke="#548235" stroke-width="2"/>
+  <text x="112" y="162" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F1F1F">User action</text>
+  <text x="112" y="186" text-anchor="middle" font-size="12" fill="#333">Customer clicks</text>
+  <text x="112" y="203" text-anchor="middle" font-size="12" fill="#333">"Start SIP" and</text>
+  <text x="112" y="220" text-anchor="middle" font-size="12" fill="#333">enters amount</text>
+
+  <!-- 2. Web frontend -->
+  <rect x="225" y="130" width="165" height="120" rx="8" fill="#E2F0D9" stroke="#548235" stroke-width="2"/>
+  <text x="307" y="162" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F1F1F">Web frontend</text>
+  <text x="307" y="186" text-anchor="middle" font-size="12" fill="#333">Browser app (HTML,</text>
+  <text x="307" y="203" text-anchor="middle" font-size="12" fill="#333">JavaScript) validates</text>
+  <text x="307" y="220" text-anchor="middle" font-size="12" fill="#333">input, sends request</text>
+
+  <!-- 3. Backend API -->
+  <rect x="420" y="130" width="165" height="120" rx="8" fill="#DCE8F7" stroke="#2F5597" stroke-width="2"/>
+  <text x="502" y="162" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F1F1F">Backend API</text>
+  <text x="502" y="186" text-anchor="middle" font-size="12" fill="#333">REST endpoint (POST</text>
+  <text x="502" y="203" text-anchor="middle" font-size="12" fill="#333">/transactions) checks</text>
+  <text x="502" y="220" text-anchor="middle" font-size="12" fill="#333">rules and saves data</text>
+
+  <!-- 4. Database -->
+  <rect x="615" y="130" width="165" height="120" rx="8" fill="#DCE8F7" stroke="#2F5597" stroke-width="2"/>
+  <text x="697" y="162" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F1F1F">Database</text>
+  <text x="697" y="186" text-anchor="middle" font-size="12" fill="#333">Relational DB (MySQL</text>
+  <text x="697" y="203" text-anchor="middle" font-size="12" fill="#333">or SQLite) stores</text>
+  <text x="697" y="220" text-anchor="middle" font-size="12" fill="#333">transactions tables</text>
+
+  <!-- 5. ETL pipeline -->
+  <rect x="810" y="130" width="165" height="120" rx="8" fill="#FFF2CC" stroke="#BF9000" stroke-width="2"/>
+  <text x="892" y="162" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F1F1F">ETL pipeline</text>
+  <text x="892" y="186" text-anchor="middle" font-size="12" fill="#333">Python script extracts,</text>
+  <text x="892" y="203" text-anchor="middle" font-size="12" fill="#333">cleans, and loads data</text>
+  <text x="892" y="220" text-anchor="middle" font-size="12" fill="#333">on a schedule</text>
+
+  <!-- 6. Dashboard -->
+  <rect x="1005" y="130" width="165" height="120" rx="8" fill="#FFF2CC" stroke="#BF9000" stroke-width="2"/>
+  <text x="1087" y="162" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F1F1F">Analytics dashboard</text>
+  <text x="1087" y="186" text-anchor="middle" font-size="12" fill="#333">Power BI shows KPIs,</text>
+  <text x="1087" y="203" text-anchor="middle" font-size="12" fill="#333">charts, and filters</text>
+  <text x="1087" y="220" text-anchor="middle" font-size="12" fill="#333">for managers</text>
+
+  <!-- Arrows between boxes (solid) -->
+  <line x1="197" y1="190" x2="221" y2="190" stroke="#404040" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="392" y1="190" x2="416" y2="190" stroke="#404040" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="587" y1="190" x2="611" y2="190" stroke="#404040" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="782" y1="190" x2="806" y2="190" stroke="#404040" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="977" y1="190" x2="1001" y2="190" stroke="#404040" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step numbers above each arrow -->
+  <g font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    <circle cx="209" cy="118" r="10" fill="#404040"/><text x="209" y="122">1</text>
+    <circle cx="404" cy="118" r="10" fill="#404040"/><text x="404" y="122">2</text>
+    <circle cx="599" cy="118" r="10" fill="#404040"/><text x="599" y="122">3</text>
+    <circle cx="794" cy="118" r="10" fill="#404040"/><text x="794" y="122">4</text>
+    <circle cx="989" cy="118" r="10" fill="#404040"/><text x="989" y="122">5</text>
+  </g>
+
+  <!-- Supporting components under the flow -->
+
+  <!-- Authentication, under frontend -->
+  <rect x="225" y="330" width="165" height="80" rx="8" fill="#F2F2F2" stroke="#7F7F7F" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="307" y="358" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F1F1F">Authentication</text>
+  <text x="307" y="378" text-anchor="middle" font-size="11" fill="#333">Login and token check</text>
+  <text x="307" y="394" text-anchor="middle" font-size="11" fill="#333">before each request</text>
+  <line x1="307" y1="250" x2="307" y2="326" stroke="#808080" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowDash)"/>
+
+  <!-- Logging and error handling, under backend -->
+  <rect x="420" y="330" width="165" height="80" rx="8" fill="#F2F2F2" stroke="#7F7F7F" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="502" y="358" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F1F1F">Logging and errors</text>
+  <text x="502" y="378" text-anchor="middle" font-size="11" fill="#333">Records each request</text>
+  <text x="502" y="394" text-anchor="middle" font-size="11" fill="#333">and returns error codes</text>
+  <line x1="502" y1="250" x2="502" y2="326" stroke="#808080" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowDash)"/>
+
+  <!-- Legend -->
+  <rect x="30" y="440" width="1140" height="100" rx="6" fill="#FAFAFA" stroke="#BFBFBF"/>
+  <text x="50" y="464" font-size="13" font-weight="bold" fill="#1F1F1F">How the data flows</text>
+  <text x="50" y="484" font-size="12" fill="#333">1. The user takes an action in the web app (for example, starts a SIP).</text>
+  <text x="50" y="501" font-size="12" fill="#333">2. The frontend sends the request to the backend API as JSON over HTTPS.</text>
+  <text x="50" y="518" font-size="12" fill="#333">3. The backend checks the request, handles errors, and saves the transaction to the database.</text>
+  <text x="50" y="535" font-size="12" fill="#333">4. The ETL pipeline reads the database on a schedule, cleans the data, and stores analysis-ready tables.</text>
+  <text x="50" y="552" font-size="12" fill="#333">5. The analytics dashboard refreshes from the cleaned tables, and managers view KPIs and trends.</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo0YTgwNTE5Yi0wNDg3LTQ2NDItYjVhOS05NGI1OGIzY2EzYzIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCxxOZ6gpEiBs/Ie61c3ulsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyODhkYjE5My1jOWQwLTRlNTQtYmUyYS03MDE4MTQzY2RlZWJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNolkQXVme1OLy5eeUU54/SDwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggaSvRqZChPYw9GFXcActZOkxIEA0eWseTgthjj5zHaY+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaIeqxEdbBL1huxUXYNXdbLkAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIDUDF90NWwv2scLOKAN2MlOmJIdCMutCWfM9s7fDNOxeZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GR2+Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjRhODA1MTliLTA0ODctNDY0Mi1iNWE5LTk0YjU4YjNjYTNjMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjIwYTFjY2JlLThjNmMtNGIzZS04M2NhLWYzMzljNTY5Mjg0ZXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBpK9GpkKE9jD0YVdwBy1k6TEgQDR5ax5OC2GOPnMdpj6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggNT/c8mufwNBv6z+IDSWmjb6x1zg6xulCEcyuGewD9jiiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggtg3sjL5n/DipxwgPPhhg+Tpcb1+M+7kH00bn6LIY/BR0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQNgthXA6NS4ryFwnjujfGP+a0p91qvEYwLcjz/BRD/btDKUqc0DISLwEHVmfXP64sdAnL06h4FnVdN49WyJbgjM=</c2pa:manifest></metadata></svg>
