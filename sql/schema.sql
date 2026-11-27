@@ -90,3 +90,13 @@ CREATE TABLE fact_aum (
     PRIMARY KEY (date, fund_house),
     FOREIGN KEY (date) REFERENCES dim_date(date)
 );
+
+
+CREATE TABLE fact_sip (
+    sip_month                  TEXT PRIMARY KEY,
+    sip_inflow_crore           REAL,
+    active_sip_accounts_crore  REAL,
+    new_sip_accounts_lakh      REAL,
+    sip_aum_lakh_crore         REAL,
+    yoy_growth_pct             REAL
+);
